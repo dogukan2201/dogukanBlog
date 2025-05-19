@@ -19,7 +19,7 @@ export const Experience = () => {
             <div className="md:w-1/3 mb-4 md:mb-0">
               <div className="flex items-center mb-2 text-gray-700 dark:text-gray-300">
                 <Briefcase size={18} className="mr-2" />
-                <span>02/2025 - Devam Ediyor</span>
+                <span>03/2025 - Devam Ediyor</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                 Frontend Developer
