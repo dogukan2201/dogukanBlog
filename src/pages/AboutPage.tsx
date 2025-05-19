@@ -21,8 +21,6 @@ const AboutPage: React.FC = () => {
     await loadFull(engine);
   }, []);
 
-  const heroRef = useRef(null);
-
   useEffect(() => {
     const techElements = document.querySelectorAll(".tech-card");
 
@@ -55,7 +53,6 @@ const AboutPage: React.FC = () => {
         className="fixed top-0 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
         style={{ scaleX }}
       />
-
       <Particles
         id="tsparticles"
         init={particlesInit}

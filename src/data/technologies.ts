@@ -42,7 +42,7 @@ export const technologies = [
       ],
     },
     {
-      category: "VeritabanıAraçlar",
+      category: "Database",
       items: [
         {
           name: "MongoDB",

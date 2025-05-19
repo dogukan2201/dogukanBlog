@@ -26,12 +26,6 @@ export const Hero = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <div className="aspect-square rounded-2xl overflow-hidden relative group">
-              <motion.img
-                src="https://images.pexels.com/photos/1181391/pexels-photo-1181391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Profile"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                whileHover={{ scale: 1.1 }}
-              />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </motion.div>
