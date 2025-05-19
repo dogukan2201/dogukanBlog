@@ -5,43 +5,40 @@ import { projects } from "../data/projects";
 
 const ProjectsPage: React.FC = () => {
   const { darkMode } = useTheme();
-  const [filter, setFilter] = useState<string>("All");
+  const [filter, setFilter] = useState<string>("Tümü");
 
-  // Extract unique categories
   const categories = [
-    "All",
+    "Tümü",
     ...new Set(projects.map((project) => project.category)),
   ];
 
   const filteredProjects =
-    filter === "All"
+    filter === "Tümü"
       ? projects
       : projects.filter((project) => project.category === filter);
 
   return (
     <div className="animate-fadeIn">
-      {/* Hero Section */}
       <section
         className={`py-16 px-4 sm:px-6 lg:px-8 ${
           darkMode ? "bg-slate-900" : "bg-white"
         }`}
       >
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-bold mb-6">Projects</h1>
+          <h1 className="text-4xl font-bold mb-6">Projeler</h1>
           <p
             className={`text-xl max-w-2xl mx-auto ${
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            A collection of my recent work, personal projects, and open-source
-            contributions.
+            Son çalışmalarım, kişisel projelerim ve açık kaynak katkılarımın bir
+            koleksiyonu.
           </p>
         </div>
       </section>
 
-      {/* Filter Section */}
       <section
-        className={`py-8 px-4 sm:px-6 lg:px-8 ${
+        className={`py-8 px-4 sm:px-6 lg:px-8 rounded-xl ${
           darkMode ? "bg-slate-800" : "bg-gray-50"
         }`}
       >
@@ -53,7 +50,7 @@ const ProjectsPage: React.FC = () => {
                 onClick={() => setFilter(category)}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   filter === category
-                    ? "bg-rose-600 text-white"
+                    ? "bg-blue-600 text-white"
                     : darkMode
                     ? "bg-slate-700 text-gray-300 hover:bg-slate-600"
                     : "bg-white text-gray-700 hover:bg-gray-100"
@@ -66,7 +63,6 @@ const ProjectsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Projects Grid */}
       <section
         className={`py-12 px-4 sm:px-6 lg:px-8 ${
           darkMode ? "bg-slate-900" : "bg-white"
@@ -97,8 +93,8 @@ const ProjectsPage: React.FC = () => {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-3 rounded-full bg-rose-600 text-white hover:bg-rose-700 transition-colors"
-                        aria-label="Live Demo"
+                        className="p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                        aria-label="Canlı Demo"
                       >
                         <ExternalLink size={18} />
                       </a>
@@ -113,7 +109,7 @@ const ProjectsPage: React.FC = () => {
                             ? "bg-slate-700 text-white hover:bg-slate-600"
                             : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                         } transition-colors`}
-                        aria-label="GitHub Repository"
+                        aria-label="GitHub Deposu"
                       >
                         <Github size={18} />
                       </a>
@@ -167,36 +163,9 @@ const ProjectsPage: React.FC = () => {
                 darkMode ? "text-gray-300" : "text-gray-600"
               }`}
             >
-              <p className="text-xl">No projects found in this category.</p>
+              <p className="text-xl">Bu kategoride proje bulunamadı.</p>
             </div>
           )}
-        </div>
-      </section>
-
-      {/* Collaborations */}
-      <section
-        className={`py-16 px-4 sm:px-6 lg:px-8 ${
-          darkMode ? "bg-slate-800" : "bg-gray-50"
-        }`}
-      >
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Interested in Collaborating?
-          </h2>
-          <p
-            className={`text-lg mb-8 ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
-            I'm always open to discussing new projects, creative ideas, or
-            opportunities to be part of your visions.
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 rounded-lg bg-rose-600 text-white font-medium hover:bg-rose-700 transition-colors shadow-md hover:shadow-lg"
-          >
-            Let's Talk
-          </a>
         </div>
       </section>
     </div>

@@ -10,18 +10,18 @@ const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [filteredPosts, setFilteredPosts] = useState(allPosts);
 
-  // Extract unique categories
-  const categories = ["All", ...new Set(allPosts.map((post) => post.category))];
+  const categories = [
+    "Tümü",
+    ...new Set(allPosts.map((post) => post.category)),
+  ];
 
   useEffect(() => {
     let results = allPosts;
 
-    // Apply category filter
-    if (selectedCategory && selectedCategory !== "All") {
+    if (selectedCategory && selectedCategory !== "Tümü") {
       results = results.filter((post) => post.category === selectedCategory);
     }
 
-    // Apply search filter
     if (searchTerm) {
       const searchTermLower = searchTerm.toLowerCase();
       results = results.filter(
@@ -37,7 +37,6 @@ const BlogPage: React.FC = () => {
 
   return (
     <div className="animate-fadeIn">
-      {/* Hero Section */}
       <section
         className={`py-16 px-4 sm:px-6 lg:px-8 ${
           darkMode ? "bg-slate-900" : "bg-white"
@@ -50,13 +49,12 @@ const BlogPage: React.FC = () => {
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            Explore articles, tutorials, and insights on web development,
-            design, and technology.
+            Web geliştirme, tasarım ve teknoloji hakkında makaleleri,
+            öğreticileri ve içgörüleri keşfedin.
           </p>
         </div>
       </section>
 
-      {/* Filters Section */}
       <section
         className={`py-8 px-4 sm:px-6 lg:px-8 ${
           darkMode ? "bg-slate-800" : "bg-gray-50"
@@ -64,7 +62,6 @@ const BlogPage: React.FC = () => {
       >
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            {/* Search */}
             <div className="relative w-full md:max-w-xs">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search
@@ -74,7 +71,7 @@ const BlogPage: React.FC = () => {
               </div>
               <input
                 type="text"
-                placeholder="Search posts..."
+                placeholder="Yazıları ara..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className={`w-full pl-10 pr-4 py-2 rounded-lg ${
@@ -85,7 +82,6 @@ const BlogPage: React.FC = () => {
               />
             </div>
 
-            {/* Categories */}
             <div className="flex items-center gap-2 flex-wrap justify-center">
               <Filter
                 size={18}
@@ -113,7 +109,6 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Blog Posts */}
       <section
         className={`py-12 px-4 sm:px-6 lg:px-8 ${
           darkMode ? "bg-slate-900" : "bg-white"
@@ -133,9 +128,11 @@ const BlogPage: React.FC = () => {
               }`}
             >
               <p className="text-xl font-medium">
-                No posts found matching your criteria.
+                Arama kriterlerinize uygun yazı bulunamadı.
               </p>
-              <p className="mt-2">Try adjusting your search or filters.</p>
+              <p className="mt-2">
+                Arama terimlerinizi veya filtrelerinizi değiştirmeyi deneyin.
+              </p>
             </div>
           )}
         </div>

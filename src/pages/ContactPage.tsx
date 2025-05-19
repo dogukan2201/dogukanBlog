@@ -27,7 +27,6 @@ const ContactPage: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitSuccess(true);
@@ -38,7 +37,6 @@ const ContactPage: React.FC = () => {
         message: "",
       });
 
-      // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);
@@ -47,28 +45,26 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="animate-fadeIn">
-      {/* Hero Section */}
       <section
         className={`py-16 px-4 sm:px-6 lg:px-8 ${
           darkMode ? "bg-slate-900" : "bg-white"
         }`}
       >
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-bold mb-6">Get in Touch</h1>
+          <h1 className="text-4xl font-bold mb-6">İletişime Geçin</h1>
           <p
             className={`text-xl max-w-2xl mx-auto ${
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            Have a question, project idea, or just want to say hello? I'd love
-            to hear from you.
+            Bir sorunuz, proje fikriniz var mı ya da sadece merhaba demek mi
+            istiyorsunuz? Sizden haber almaktan mutluluk duyarım.
           </p>
         </div>
       </section>
 
-      {/* Contact Information */}
       <section
-        className={`py-12 px-4 sm:px-6 lg:px-8 ${
+        className={`py-12 px-4 sm:px-6 lg:px-8 rounded-xl ${
           darkMode ? "bg-slate-800" : "bg-gray-50"
         }`}
       >
@@ -82,9 +78,9 @@ const ContactPage: React.FC = () => {
               <div className="w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-4 bg-rose-100 text-rose-600">
                 <MapPin size={24} />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Location</h3>
+              <h3 className="text-xl font-semibold mb-2">Konum</h3>
               <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                San Francisco, CA
+                İzmir, Türkiye
               </p>
             </div>
 
@@ -96,16 +92,16 @@ const ContactPage: React.FC = () => {
               <div className="w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
                 <Mail size={24} />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Email</h3>
+              <h3 className="text-xl font-semibold mb-2">E-posta</h3>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:husnudogukan@gmail.com"
                 className={`${
                   darkMode
                     ? "text-gray-400 hover:text-white"
                     : "text-gray-600 hover:text-gray-900"
                 } transition-colors`}
               >
-                hello@example.com
+                husnudogukan@gmail.com
               </a>
             </div>
 
@@ -117,39 +113,40 @@ const ContactPage: React.FC = () => {
               <div className="w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-4 bg-green-100 text-green-600">
                 <Phone size={24} />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Phone</h3>
+              <h3 className="text-xl font-semibold mb-2">Telefon</h3>
               <a
-                href="tel:+1234567890"
+                href="tel:+05340415110"
                 className={`${
                   darkMode
                     ? "text-gray-400 hover:text-white"
                     : "text-gray-600 hover:text-gray-900"
                 } transition-colors`}
               >
-                +1 (234) 567-890
+                +90 (534) 041-5110
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Form */}
       <section
-        className={`py-16 px-4 sm:px-6 lg:px-8 ${
+        className={`py-16 px-4 sm:px-6 lg:px-8  ${
           darkMode ? "bg-slate-900" : "bg-white"
         }`}
       >
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Send a Message</h2>
+          <div className="flex justify-center">
+            <div className="w-full max-w-2xl">
+              <h2 className="text-3xl font-bold mb-6 text-center">
+                Mesaj Gönderin
+              </h2>
               <p
-                className={`mb-8 ${
+                className={`mb-8 text-center ${
                   darkMode ? "text-gray-300" : "text-gray-600"
                 }`}
               >
-                Fill out the form below and I'll get back to you as soon as
-                possible.
+                Aşağıdaki formu doldurun, en kısa sürede size geri dönüş
+                yapacağım.
               </p>
 
               {submitSuccess && (
@@ -159,8 +156,8 @@ const ContactPage: React.FC = () => {
                     size={18}
                   />
                   <p>
-                    Your message has been sent successfully! I'll get back to
-                    you soon.
+                    Mesajınız başarıyla gönderildi! En kısa sürede size geri
+                    dönüş yapacağım.
                   </p>
                 </div>
               )}
@@ -172,8 +169,8 @@ const ContactPage: React.FC = () => {
                     size={18}
                   />
                   <p>
-                    There was an error sending your message. Please try again
-                    later.
+                    Mesajınız gönderilirken bir hata oluştu. Lütfen daha sonra
+                    tekrar deneyin.
                   </p>
                 </div>
               )}
@@ -187,7 +184,7 @@ const ContactPage: React.FC = () => {
                         darkMode ? "text-gray-300" : "text-gray-700"
                       }`}
                     >
-                      Your Name
+                      Adınız
                     </label>
                     <input
                       type="text"
@@ -201,7 +198,7 @@ const ContactPage: React.FC = () => {
                           ? "bg-slate-800 text-white border-slate-700 focus:border-rose-500"
                           : "bg-white text-gray-900 border-gray-300 focus:border-rose-500"
                       } border focus:outline-none focus:ring-2 focus:ring-rose-500`}
-                      placeholder="John Doe"
+                      placeholder="Ahmet Yılmaz"
                     />
                   </div>
                   <div>
@@ -211,7 +208,7 @@ const ContactPage: React.FC = () => {
                         darkMode ? "text-gray-300" : "text-gray-700"
                       }`}
                     >
-                      Your Email
+                      E-posta Adresiniz
                     </label>
                     <input
                       type="email"
@@ -225,7 +222,7 @@ const ContactPage: React.FC = () => {
                           ? "bg-slate-800 text-white border-slate-700"
                           : "bg-white text-gray-900 border-gray-300"
                       } border focus:outline-none focus:ring-2 focus:ring-rose-500`}
-                      placeholder="john@example.com"
+                      placeholder="ahmet@ornek.com"
                     />
                   </div>
                 </div>
@@ -237,7 +234,7 @@ const ContactPage: React.FC = () => {
                       darkMode ? "text-gray-300" : "text-gray-700"
                     }`}
                   >
-                    Subject
+                    Konu
                   </label>
                   <input
                     type="text"
@@ -251,7 +248,7 @@ const ContactPage: React.FC = () => {
                         ? "bg-slate-800 text-white border-slate-700"
                         : "bg-white text-gray-900 border-gray-300"
                     } border focus:outline-none focus:ring-2 focus:ring-rose-500`}
-                    placeholder="How can I help you?"
+                    placeholder="Size nasıl yardımcı olabilirim?"
                   />
                 </div>
 
@@ -262,7 +259,7 @@ const ContactPage: React.FC = () => {
                       darkMode ? "text-gray-300" : "text-gray-700"
                     }`}
                   >
-                    Message
+                    Mesajınız
                   </label>
                   <textarea
                     id="message"
@@ -276,94 +273,23 @@ const ContactPage: React.FC = () => {
                         ? "bg-slate-800 text-white border-slate-700"
                         : "bg-white text-gray-900 border-gray-300"
                     } border focus:outline-none focus:ring-2 focus:ring-rose-500`}
-                    placeholder="Your message here..."
+                    placeholder="Mesajınızı buraya yazın..."
                   ></textarea>
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`inline-flex items-center px-6 py-3 rounded-lg bg-rose-600 text-white font-medium hover:bg-rose-700 transition-colors shadow-md hover:shadow-lg ${
-                    isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-                  }`}
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                  <Send size={18} className="ml-2" />
-                </button>
+                <div className="flex justify-center">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className={`inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg ${
+                      isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                    }`}
+                  >
+                    {isSubmitting ? "Gönderiliyor..." : "Mesaj Gönder"}
+                    <Send size={18} className="ml-2" />
+                  </button>
+                </div>
               </form>
-            </div>
-
-            <div className="lg:pl-8">
-              <h2 className="text-3xl font-bold mb-6">
-                Frequently Asked Questions
-              </h2>
-
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    What services do you offer?
-                  </h3>
-                  <p
-                    className={`${
-                      darkMode ? "text-gray-300" : "text-gray-600"
-                    }`}
-                  >
-                    I specialize in full-stack web development, focusing on
-                    React, Node.js, and related technologies. My services
-                    include front-end development, back-end development,
-                    performance optimization, and technical consulting.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    How much do you charge?
-                  </h3>
-                  <p
-                    className={`${
-                      darkMode ? "text-gray-300" : "text-gray-600"
-                    }`}
-                  >
-                    Project rates vary depending on scope, complexity, and
-                    timeline. I offer competitive rates and can work on hourly,
-                    weekly, or project-based pricing models. Contact me with
-                    your project details for a custom quote.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    What is your typical timeline?
-                  </h3>
-                  <p
-                    className={`${
-                      darkMode ? "text-gray-300" : "text-gray-600"
-                    }`}
-                  >
-                    Timeline depends on project scope and current workload.
-                    Small projects may take 1-2 weeks, while larger projects can
-                    take several months. I'm committed to providing realistic
-                    estimates and regular updates throughout the development
-                    process.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    Do you offer maintenance services?
-                  </h3>
-                  <p
-                    className={`${
-                      darkMode ? "text-gray-300" : "text-gray-600"
-                    }`}
-                  >
-                    Yes, I offer maintenance packages for websites and
-                    applications I've built. These can include regular updates,
-                    security patches, performance monitoring, and feature
-                    enhancements as needed.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

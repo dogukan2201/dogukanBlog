@@ -10,7 +10,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* Base styles */
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,7 +21,7 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* Utility classes */
+
 .aspect-video {
   aspect-ratio: 16 / 9;
 }
@@ -30,7 +30,7 @@ body {
   aspect-ratio: 1 / 1;
 }
 
-/* Prose styling for blog content */
+
 .prose {
   max-width: 65ch;
   margin-left: auto;

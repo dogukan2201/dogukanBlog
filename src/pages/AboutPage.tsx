@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Briefcase, GraduationCap, Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import { motion, useScroll, useSpring, useInView } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useCallback } from "react";
@@ -23,7 +22,6 @@ const AboutPage: React.FC = () => {
   }, []);
 
   const heroRef = useRef(null);
-  const isHeroInView = useInView(heroRef, { once: true });
 
   useEffect(() => {
     const techElements = document.querySelectorAll(".tech-card");
@@ -53,13 +51,11 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="relative">
-      {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
         style={{ scaleX }}
       />
 
-      {/* Particles Background */}
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -97,18 +93,9 @@ const AboutPage: React.FC = () => {
         }}
         className="absolute inset-0"
       />
-
-      {/* Hero Section */}
       <Hero />
-      {/* Hero Section */}
-
-      {/* Technologies Section */}
       <TechStack />
-      {/* Technologies Section */}
-
-      {/* Experience Section */}
       <Experience />
-      {/* Experience Section */}
     </div>
   );
 };

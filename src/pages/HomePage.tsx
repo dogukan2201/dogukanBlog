@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Terminal, Code, BookOpen } from "lucide-react";
+import { ArrowRight, Terminal } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 import { featuredPosts, recentPosts } from "../data/posts";
 import PostCard from "../components/PostCard";
