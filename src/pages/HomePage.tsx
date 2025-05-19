@@ -23,7 +23,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="animate-fadeIn font-mono">
-      {/* Hero Section */}
       <section
         className={`py-12 sm:py-20 px-4 sm:px-6 lg:px-8 ${
           darkMode ? "bg-slate-900" : "bg-gradient-to-br from-white to-gray-100"
@@ -71,7 +70,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Posts Section */}
       <section
         className={`py-12 sm:py-16 px-4 sm:px-6 lg:px-8 ${
           darkMode && "bg-slate-900"
@@ -109,7 +107,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Recent Posts Section */}
       <section
         className={`py-12 sm:py-16 px-4 sm:px-6 lg:px-8 ${
           darkMode && "bg-slate-900"

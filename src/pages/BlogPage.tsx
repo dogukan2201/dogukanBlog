@@ -56,7 +56,7 @@ const BlogPage: React.FC = () => {
       </section>
 
       <section
-        className={`py-8 px-4 sm:px-6 lg:px-8 ${
+        className={`py-8 px-4 sm:px-6 lg:px-8 rounded-xl ${
           darkMode ? "bg-slate-800" : "bg-gray-50"
         }`}
       >
