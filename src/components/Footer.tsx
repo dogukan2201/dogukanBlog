@@ -17,25 +17,19 @@ const Footer: React.FC = () => {
   const socialLinks: SocialLink[] = [
     {
       name: "GitHub",
-      url: "https://github.com",
+      url: "https://github.com/dogukan2201",
       icon: <Github size={20} />,
       ariaLabel: "GitHub profiline git",
     },
     {
-      name: "Twitter",
-      url: "https://twitter.com",
-      icon: <Twitter size={20} />,
-      ariaLabel: "Twitter profiline git",
-    },
-    {
       name: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/dogukan-ozturk-862497221/",
       icon: <Linkedin size={20} />,
       ariaLabel: "LinkedIn profiline git",
     },
     {
       name: "Email",
-      url: "mailto:hello@example.com",
+      url: "mailto:husnudogukan@gmail.com",
       icon: <Mail size={20} />,
       ariaLabel: "Email gönder",
     },
@@ -129,7 +123,7 @@ const Footer: React.FC = () => {
                 darkMode ? "text-blue-400" : "text-blue-800"
               }`}
             >
-              Tüm hakları saklıdır.
+              {currentYear} Tüm hakları saklıdır.
             </p>
           </div>
         </div>

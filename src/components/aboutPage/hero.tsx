@@ -37,7 +37,7 @@ export const Hero = () => {
             transition={{ delay: 0.7, duration: 0.5 }}
           >
             <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-              H.Doğukan Öztürk
+              Doğukan Öztürk
             </h1>
             <motion.h2
               className="text-xl mb-6 text-blue-600 dark:text-blue-400"
@@ -46,16 +46,38 @@ export const Hero = () => {
             >
               Frontend Developer
             </motion.h2>
-            <p className="text-lg mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
-              Bilgisayar Mühendisliği öğrencisi olarak, modern web teknolojileri
-              ve yazılım geliştirme konularında tutkulu bir geliştiriciyim.
-              Frontend ve backend teknolojilerinde deneyim sahibiyim ve sürekli
-              kendimi geliştirmeye odaklanıyorum. Agile/Scrum metodolojileri ile
-              çalışma deneyimine sahibim ve takım çalışmasına yatkınım.
-            </p>
+            <div className="space-y-6">
+              <p className="text-xl font-medium leading-relaxed text-gray-800 dark:text-gray-200">
+                Frontend geliştirme tarafına ilgi duyan bir Bilgisayar
+                Mühendisliği öğrencisiyim. Web teknolojileriyle çalışmak benim
+                için sadece bir iş değil, aynı zamanda keyif aldığım bir öğrenme
+                süreci.
+              </p>
+
+              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                Özellikle{" "}
+                <span className="font-semibold text-blue-600 dark:text-blue-400">
+                  React
+                </span>{" "}
+                ve modern frontend araçlarıyla arayüzler oluşturmayı seviyorum.
+                Backend tarafında da temel düzeyde deneyimim var, ancak
+                kullanıcıya dokunan, görsel ve etkileşimli yapılar geliştirmek
+                benim için daha heyecan verici.
+              </p>
+
+              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                Takım içinde uyumlu çalışmaya özen gösteririm ve{" "}
+                <span className="font-semibold text-purple-600 dark:text-purple-400">
+                  Agile/Scrum
+                </span>{" "}
+                gibi yöntemlerle proje yürütme deneyimim bulunuyor. Her geçen
+                gün yeni şeyler öğrenmeye ve yazdığım kodu biraz daha iyi hale
+                getirmeye çalışıyorum.
+              </p>
+            </div>
 
             <motion.div
-              className="flex gap-4"
+              className="flex gap-4 mt-8"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}

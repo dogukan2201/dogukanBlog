@@ -28,7 +28,16 @@ export const Experience = () => {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400">
-                <li>Frontend Developer olarak çalışıyorum</li>
+                <li>Frontend Web Developer olarak çalışıyorum</li>
+                <li>
+                  React, React Native ile performans odaklı uygulamalar inşa
+                  ediyorum.
+                </li>
+
+                <li>
+                  Projelerde kullanıcı deneyimini artırmak için yeni
+                  teknolojiler öğreniyorum.
+                </li>
               </ul>
             </div>
           </div>
@@ -59,9 +68,35 @@ export const Experience = () => {
                   Uygulama performansını ve işlevselliğini artırmak için
                   çalıştım
                 </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row">
+            <div className="md:w-1/3 mb-4 md:mb-0">
+              <div className="flex items-center mb-2 text-gray-700 dark:text-gray-300">
+                <Briefcase size={18} className="mr-2" />
+                <span>11/2024 - 02/2025</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+                Software Developer
+              </h3>
+              <p className="text-blue-600 dark:text-blue-400">
+                WSOLV (Gönüllü)
+              </p>
+            </div>
+            <div className="md:w-2/3 md:pl-8">
+              <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400">
                 <li>
-                  Yazılım güncellemelerinin hata ayıklama, test ve dağıtımında
-                  görev aldım
+                  Performans ve ölçeklenebilirlik için backend servisleri
+                  geliştirdim ve API'ları optimize ettim
+                </li>
+                <li>
+                  Yeni özellikler ve iyileştirmeler için Scrum/Agile ekibinde
+                  çalıştım
+                </li>
+                <li>
+                  Backend geliştirme, API entegrasyonları ve veritabanı
+                  yönetiminde deneyim kazandım
                 </li>
               </ul>
             </div>
@@ -96,36 +131,7 @@ export const Experience = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/3 mb-4 md:mb-0">
-              <div className="flex items-center mb-2 text-gray-700 dark:text-gray-300">
-                <Briefcase size={18} className="mr-2" />
-                <span>11/2024 - 02/2025</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                Backend Developer
-              </h3>
-              <p className="text-blue-600 dark:text-blue-400">
-                WSOLV (Gönüllü)
-              </p>
-            </div>
-            <div className="md:w-2/3 md:pl-8">
-              <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400">
-                <li>
-                  Performans ve ölçeklenebilirlik için backend servisleri
-                  geliştirdim ve API'ları optimize ettim
-                </li>
-                <li>
-                  Yeni özellikler ve iyileştirmeler için Scrum/Agile ekibinde
-                  çalıştım
-                </li>
-                <li>
-                  Backend geliştirme, API entegrasyonları ve veritabanı
-                  yönetiminde deneyim kazandım
-                </li>
-              </ul>
-            </div>
-          </div>
+
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/3 mb-4 md:mb-0">
               <div className="flex items-center mb-2 text-gray-700 dark:text-gray-300">
@@ -140,11 +146,11 @@ export const Experience = () => {
               </p>
             </div>
             <div className="md:w-2/3 md:pl-8">
-              <p className="text-gray-700 dark:text-gray-300">
-                Bilgisayar Mühendisliği bölümünde eğitimime devam ediyorum.
-                Yazılım mühendisliği ve web geliştirme alanlarında
-                uzmanlaşıyorum.
-              </p>
+              <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400">
+                <li>
+                  Bilgisayar Mühendisliği bölümünde eğitimime devam ediyorum.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
